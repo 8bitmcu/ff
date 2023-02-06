@@ -1,0 +1,313 @@
+/* Removes the hover effect from most buttons */
+toolbar {
+  --toolbarbutton-hover-background: initial !important;
+}
+
+
+/*
+	TAB BAR
+*/
+
+/* reduces the tab bar height */
+:root, #tabbrowser-tabs {
+  --tab-min-height: 22px !important;
+}
+.tab-background {
+  margin-block: 0 !important
+}
+#TabsToolbar-customization-target, #tabbrowser-tabs {
+  height: var(--tab-min-height);
+}
+/* hides the tab bar when in 'new window' mode */
+window[chromehidden^="menubar"] #titlebar {
+  height: 0;
+}
+/* hides the firefox icon on the top-left */
+#firefox-view-button {
+  display: none
+}
+/* removes the vertical bar next to the firefox icon */
+#tabbrowser-tabs {
+  padding-inline-start: 0 !important;
+  border-inline-start: none !important;
+  margin-inline-start: 0 !important;
+}
+.tabbrowser-tab {
+  padding: 0 !important
+}
+/* remove rounded corners on tabs */
+.tab-background {
+  border-radius: 0 !important;
+}
+
+
+/* hides the 'X' (close) button from tab until hover */
+.tab-close-button {
+  visibility: collapse;
+}
+.tabbrowser-tab:hover .tab-close-button {
+  visibility: visible;
+}
+
+.tab-secondary-label {
+  display: none !important;
+}
+
+/* hide the '+' (new tab) button from the tab bar until hover */
+#tabs-newtab-button {
+  visibility: hidden;
+}
+#TabsToolbar:hover #tabs-newtab-button {
+  visibility: visible;
+}
+
+/* prepend the tab number before tab name */
+.browser-toolbar {
+  counter-reset: tabindex;
+}
+.tab-label::before {
+  counter-increment: tabindex;
+  content: counter(tabindex) ". ";
+  white-space: pre;
+  opacity: 0.6;
+}
+
+/* remove window control when in fullscreen (minimize/fullscreen/close) */
+#window-controls toolbarbutton {
+  display: none;
+}
+
+/* hides the All tabs button */
+#alltabs-button {
+  display: none !important
+}
+
+
+
+
+/*
+	NAV BAR
+*/
+
+/* reduces the searchbar/navbar height */
+#urlbar, .searchbar-textbox {
+  min-height: initial !important;
+  margin: 0 !important;
+}
+
+/* normalize icon sizes and spaces between them */
+toolbarbutton {
+  padding: 0 0 !important
+}
+
+
+
+/* uses the "bookmark this page" (star) icon for the bookmark menu */
+#bookmarks-menu-button {
+    list-style-image: url("chrome://browser/skin/bookmark-hollow.svg") !important;
+}
+
+/* removes the extensions button */
+#unified-extensions-button {
+  display: none !important;
+}
+
+
+/* hides the harmburger icon separator */
+#PanelUI-button {
+  border: none !important;
+}
+
+/* removes extra spacing around hamburger icon */
+#PanelUI-button, #PanelUI-menu-button {
+  padding-inline-start: 0 !important;
+  padding-inline-end: 0 !important;
+}
+
+
+/*
+	NAV TEXTBOX
+*/
+
+/* hides the placeholder text in search bar */
+#urlbar-input::placeholder {
+  color: transparent;
+}
+
+/* makes the textbox the same color as the rest of the navbar */
+#urlbar-background {
+  background-color: var(--toolbar-bgcolor) !important;
+}
+
+
+
+/*
+	NAV TEXTBOX - LEFT
+*/
+
+/* hides the tracking protection (shield) icon */
+#tracking-protection-icon-box {
+   visibility: collapse !important;
+}
+
+/* hides the identity (i) icon */
+#identity-icon {
+  width: 0 !important;
+  /* ps: using display:none or visibility:collapse affects the certificate dialog */
+}
+
+/* hides certificates label until hover */
+#identity-icon-label, #identity-icon-country-label {
+  visibility: collapse !important;
+}
+#identity-box:hover #identity-icon-label,
+#identity-box:hover #identity-icon-country-label {
+  visibility: visible !important;
+}
+/* fixes spacing caused by hiding certificates */
+#identity-box {
+  padding-inline-end: 4px !important;
+  margin-inline-end: 4px !important;
+}
+
+/* removes the right-hand border next to certificates text */
+#identity-box {
+  border: none !important;
+}
+
+
+/*
+	NAV TEXTBOX - RIGHT
+*/
+
+/* removes the reader icon and seperator */
+#pageActionSeparator, #reader-mode-button {
+  visibility: collapse !important;
+}
+
+/* removes the history button */
+.urlbar-history-dropmarker {
+  display: none;
+}
+
+/* removes the bookmark button */
+#star-button {
+  opacity: 0;
+  padding: 0 !important;
+  width: 1px !important;
+}
+
+/* removes the page action button */
+#pageActionButton {
+  display: none !important;
+}
+
+
+
+/*
+	BOOKMARKS MENU
+*/
+
+/* Remove "Show All Bookmarks" (top) menu item */
+#BMB_bookmarksShowAllTop,
+/* remove "Display bookmarks sidebar" menu item */
+#BMB_viewBookmarksSidebar,
+/* remove "Bookmarks Toolbar" menu item */
+#BMB_bookmarksToolbar,
+/* Hides all separators */
+#BMB_bookmarksPopup menuseparator
+{
+  display: none
+}
+
+/* Adjust "Show All Bookmarks" and "Open all in tabs" size */
+#BMB_bookmarksShowAll, .openintabs-menuitem {
+  min-height: initial !important;
+}
+
+
+
+/*
+	HISTORY MENU
+*/
+/* Remove "View History Sidebar" menu item */
+#appMenuViewHistorySidebar,
+/* Remove "Clear Recent History" menu item */
+#appMenuClearRecentHistory,
+/* Remove "Recently Closed Tabs" menu item */
+#appMenuRecentlyClosedTabs,
+/* Remove "Recently Closed Windows" menu item */
+#appMenuRecentlyClosedWindows,
+/* Remove "Recent History" label */
+#PanelUI-history .subview-subheader
+{
+  display: none
+}
+
+/* Hides all separators */
+#PanelUI-history toolbarseparator {
+  visibility: collapse;
+}
+
+/* Adjust "Show All History" size */
+#PanelUI-historyMore {
+  min-height: initial !important;
+}
+
+
+
+/*
+	HAMBURGER ICON
+*/
+
+/* Remove "Sign in to Sync" menu item */
+#appMenu-fxa-status2,
+/* Remove "Content Blocking" menu item */
+#appMenu-mainView toolbaritem[closemenu],
+/* Remove "Zoom" menu item */
+#appMenu-zoom-controls,
+/* Remove "Edit" menu item */
+#appMenu-edit-controls,
+/* Remove "Library" menu item */
+#appMenu-library-button,
+/* Remove "Add-Ons" menu item */
+#appMenu-addons-button,
+/* Remove "Find in this page" menu item */
+#appMenu-find-button2,
+/* Remove "Help" menu item */
+#appMenu-help-button2,
+/* Remove "Quit" menu item */
+#appMenu-quit-button2,
+/* Remove "Add-ons and themes" menu item */
+#appMenu-extensions-themes-button,
+/* Hides all separators */
+#appMenu-protonMainView toolbarseparator
+{
+  display: none !important;
+}
+
+
+
+/*
+	ADD/EDIT BOOKMARK
+*/
+
+/* Remove preview image, favicon */
+#editBookmarkPanelFaviconContainer, #editBookmarkPanelImage {
+  display: none !important;
+}
+
+/* Hides "Show editor when saving" toggle button */
+#editBookmarkPanelBottomContent {
+  display: none !important;
+}
+
+/* Hides "Tags" textbox */
+.editBMPanel_tagsRow {
+  display: none !important;
+}
+
+/* Show "Keyword" textbox */
+.editBMPanel_keywordRow {
+  display: initial !important;
+}
