@@ -1,4 +1,4 @@
-## FF
+## ff
 
 ff is an opiniated, minimal looking theme for Firefox on Linux. It features:
 - Lots of hidden visual components, or reduced by size
