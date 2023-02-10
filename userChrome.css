@@ -86,7 +86,7 @@ window[chromehidden^="menubar"] #titlebar {
 	NAV BAR
 */
 
-/* reduces the navbar height */
+/* reduces the narbar height */
 #urlbar {
   --urlbar-toolbar-height: 25px !important;
 }
@@ -94,7 +94,7 @@ window[chromehidden^="menubar"] #titlebar {
   --urlbar-container-height: 25px !important;
 }
 #nav-bar-customization-target toolbarbutton image,
-#nav-bar-customization-target toolbarbutton stack {
+toolbarbutton stack {
   padding: calc(var(--toolbarbutton-inner-padding) / 2) !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
