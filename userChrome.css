@@ -3,19 +3,20 @@ toolbar {
   --toolbarbutton-hover-background: initial !important;
 }
 
-
 /*
 	TAB BAR
 */
 
 /* reduces the tab bar height */
-:root, #tabbrowser-tabs {
-  --tab-min-height: 22px !important;
+:root,
+#tabbrowser-tabs {
+  --tab-min-height: 20px !important;
 }
 .tab-background {
-  margin-block: 0 !important
+  margin-block: 0 !important;
 }
-#TabsToolbar-customization-target, #tabbrowser-tabs {
+#TabsToolbar-customization-target,
+#tabbrowser-tabs {
   height: var(--tab-min-height);
 }
 /* hides the tab bar when in 'new window' mode */
@@ -24,7 +25,7 @@ window[chromehidden^="menubar"] #titlebar {
 }
 /* hides the firefox icon on the top-left */
 #firefox-view-button {
-  display: none
+  display: none;
 }
 /* removes the vertical bar next to the firefox icon */
 #tabbrowser-tabs {
@@ -33,13 +34,12 @@ window[chromehidden^="menubar"] #titlebar {
   margin-inline-start: 0 !important;
 }
 .tabbrowser-tab {
-  padding: 0 !important
+  padding: 0 !important;
 }
 /* remove rounded corners on tabs */
 .tab-background {
   border-radius: 0 !important;
 }
-
 
 /* hides the 'X' (close) button from tab until hover */
 .tab-close-button {
@@ -79,32 +79,44 @@ window[chromehidden^="menubar"] #titlebar {
 
 /* hides the All tabs button */
 #alltabs-button {
-  display: none !important
+  display: none !important;
 }
-
-
-
 
 /*
 	NAV BAR
 */
 
+/* reduces the navbar height */
+#urlbar {
+  --urlbar-toolbar-height: 25px !important;
+}
+#urlbar-container {
+  --urlbar-container-height: 25px !important;
+}
+#nav-bar-customization-target toolbarbutton image,
+#nav-bar-customization-target toolbarbutton stack {
+  padding: calc(var(--toolbarbutton-inner-padding) / 2) !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  height: initial !important;
+  width: initial !important;
+}
+
 /* reduces the searchbar/navbar height */
-#urlbar, .searchbar-textbox {
+#urlbar,
+.searchbar-textbox {
   min-height: initial !important;
   margin: 0 !important;
 }
 
 /* normalize icon sizes and spaces between them */
 toolbarbutton {
-  padding: 0 0 !important
+  padding: 0 0 !important;
 }
-
-
 
 /* uses the "bookmark this page" (star) icon for the bookmark menu */
 #bookmarks-menu-button {
-    list-style-image: url("chrome://browser/skin/bookmark-hollow.svg") !important;
+  list-style-image: url("chrome://browser/skin/bookmark-hollow.svg") !important;
 }
 
 /* removes the extensions button */
@@ -112,18 +124,17 @@ toolbarbutton {
   display: none !important;
 }
 
-
 /* hides the harmburger icon separator */
 #PanelUI-button {
   border: none !important;
 }
 
 /* removes extra spacing around hamburger icon */
-#PanelUI-button, #PanelUI-menu-button {
+#PanelUI-button,
+#PanelUI-menu-button {
   padding-inline-start: 0 !important;
   padding-inline-end: 0 !important;
 }
-
 
 /*
 	NAV TEXTBOX
@@ -139,15 +150,13 @@ toolbarbutton {
   background-color: var(--toolbar-bgcolor) !important;
 }
 
-
-
 /*
 	NAV TEXTBOX - LEFT
 */
 
 /* hides the tracking protection (shield) icon */
 #tracking-protection-icon-box {
-   visibility: collapse !important;
+  visibility: collapse !important;
 }
 
 /* hides the identity (i) icon */
@@ -157,7 +166,8 @@ toolbarbutton {
 }
 
 /* hides certificates label until hover */
-#identity-icon-label, #identity-icon-country-label {
+#identity-icon-label,
+#identity-icon-country-label {
   visibility: collapse !important;
 }
 #identity-box:hover #identity-icon-label,
@@ -175,13 +185,13 @@ toolbarbutton {
   border: none !important;
 }
 
-
 /*
 	NAV TEXTBOX - RIGHT
 */
 
 /* removes the reader icon and seperator */
-#pageActionSeparator, #reader-mode-button {
+#pageActionSeparator,
+#reader-mode-button {
   visibility: collapse !important;
 }
 
@@ -202,8 +212,6 @@ toolbarbutton {
   display: none !important;
 }
 
-
-
 /*
 	BOOKMARKS MENU
 */
@@ -215,17 +223,15 @@ toolbarbutton {
 /* remove "Bookmarks Toolbar" menu item */
 #BMB_bookmarksToolbar,
 /* Hides all separators */
-#BMB_bookmarksPopup menuseparator
-{
-  display: none
+#BMB_bookmarksPopup menuseparator {
+  display: none;
 }
 
 /* Adjust "Show All Bookmarks" and "Open all in tabs" size */
-#BMB_bookmarksShowAll, .openintabs-menuitem {
+#BMB_bookmarksShowAll,
+.openintabs-menuitem {
   min-height: initial !important;
 }
-
-
 
 /*
 	HISTORY MENU
@@ -239,9 +245,8 @@ toolbarbutton {
 /* Remove "Recently Closed Windows" menu item */
 #appMenuRecentlyClosedWindows,
 /* Remove "Recent History" label */
-#PanelUI-history .subview-subheader
-{
-  display: none
+#PanelUI-history .subview-subheader {
+  display: none;
 }
 
 /* Hides all separators */
@@ -253,8 +258,6 @@ toolbarbutton {
 #PanelUI-historyMore {
   min-height: initial !important;
 }
-
-
 
 /*
 	HAMBURGER ICON
@@ -281,19 +284,17 @@ toolbarbutton {
 /* Remove "Add-ons and themes" menu item */
 #appMenu-extensions-themes-button,
 /* Hides all separators */
-#appMenu-protonMainView toolbarseparator
-{
+#appMenu-protonMainView toolbarseparator {
   display: none !important;
 }
-
-
 
 /*
 	ADD/EDIT BOOKMARK
 */
 
 /* Remove preview image, favicon */
-#editBookmarkPanelFaviconContainer, #editBookmarkPanelImage {
+#editBookmarkPanelFaviconContainer,
+#editBookmarkPanelImage {
   display: none !important;
 }
 
