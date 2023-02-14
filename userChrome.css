@@ -36,6 +36,10 @@ window[chromehidden^="menubar"] #titlebar {
 .tabbrowser-tab {
   padding: 0 !important;
 }
+/* removes left-hand spacing on Windows */
+.titlebar-spacer {
+  display: none;
+}
 /* remove rounded corners on tabs */
 .tab-background {
   border-radius: 0 !important;
@@ -108,17 +112,22 @@ toolbarbutton stack {
   min-height: initial !important;
   margin: 0 !important;
 }
-
+#titlebar {
+  appearance: initial !important;
+}
 /* normalize icon sizes and spaces between them */
-toolbarbutton {
+.toolbar-items toolbarbutton {
   padding: 0 0 !important;
+}
+toolbarbutton {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 /* uses the "bookmark this page" (star) icon for the bookmark menu */
 #bookmarks-menu-button {
   list-style-image: url("chrome://browser/skin/bookmark-hollow.svg") !important;
 }
-
 /* removes the extensions button */
 #unified-extensions-button {
   display: none !important;
