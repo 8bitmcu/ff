@@ -1,6 +1,6 @@
 ## ff
 
-ff is an opiniated, minimal looking theme for Firefox on Linux. It features:
+ff is an opiniated, minimal looking theme for Firefox Linux and Windows. It features:
 - Lots of hidden visual components, or reduced by size
 - Tab close button and new tab button only appears on hover
 - menus are simplified, some items are removed for a cleaner look
