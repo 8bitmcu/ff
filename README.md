@@ -14,7 +14,9 @@ Copy userChrome.css to the chrome folder under your firefox profile. You will ne
 ### Preview
 
 Windows:
+
 ![windows](assets/windows.png)
 
 Linux:
+
 ![linux](assets/linux.png)
