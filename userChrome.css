@@ -53,6 +53,7 @@ window[chromehidden^="menubar"] #titlebar {
   visibility: visible;
 }
 
+/* hides the audio playing / secondary label from tabs */
 .tab-secondary-label {
   display: none !important;
 }
@@ -163,25 +164,36 @@ toolbarbutton {
 	NAV TEXTBOX - LEFT
 */
 
-/* hides the tracking protection (shield) icon */
+/* hides the tracking protection (shield) icon until we hover on the urlbar */
 #tracking-protection-icon-box {
-  visibility: collapse !important;
+  visibility: hidden !important;
+}
+#nav-bar:hover #tracking-protection-icon-box {
+  visibility: initial !important;
 }
 
-/* hides the identity (i) icon */
+/* hides the identity (i) icon until we hover on the urlbar */
 #identity-icon {
-  width: 0 !important;
-  /* ps: using display:none or visibility:collapse affects the certificate dialog */
+  visibility: hidden !important;
+}
+#nav-bar:hover #identity-icon {
+  visibility: initial !important;
 }
 
-/* hides certificates label until hover */
-#identity-icon-label,
-#identity-icon-country-label {
-  visibility: collapse !important;
+/* hides permission icon until we hover on the urlbar */ 
+#identity-permission-box {
+  visibility: hidden !important;
 }
-#identity-box:hover #identity-icon-label,
-#identity-box:hover #identity-icon-country-label {
-  visibility: visible !important;
+#nav-bar:hover #identity-permission-box {
+  visibility: initial !important;
+}
+
+/* hides certificates label until we hover on the urlbar */
+#identity-icon-box {
+  visibility: hidden !important;
+}
+#nav-bar:hover #identity-icon-box {
+  visibility: initial !important;
 }
 /* fixes spacing caused by hiding certificates */
 #identity-box {
@@ -210,10 +222,8 @@ toolbarbutton {
 }
 
 /* removes the bookmark button */
-#star-button {
-  opacity: 0;
-  padding: 0 !important;
-  width: 1px !important;
+#star-button-box {
+  display: none !important;
 }
 
 /* removes the page action button */
