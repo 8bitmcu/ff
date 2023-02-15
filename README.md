@@ -12,4 +12,5 @@ ff is an opiniated, minimal looking theme for Firefox on Linux. It features:
 Copy userChrome.css to the chrome folder under your firefox profile. You will need to enable `toolkit.legacyUserProfileCustomizations.stylesheets` under `about:config`
 
 ### Preview
-![preview](assets/preview.png)
+![windows](assets/windows.png)
+![linux](assets/linux.png)
