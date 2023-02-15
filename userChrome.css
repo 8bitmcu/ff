@@ -4,7 +4,7 @@ toolbar {
 }
 
 /*
-	TAB BAR
+  NAV BAR
 */
 
 /* reduces the tab bar height */
@@ -88,10 +88,10 @@ window[chromehidden^="menubar"] #titlebar {
 }
 
 /*
-	NAV BAR
+   URL BAR
 */
 
-/* reduces the narbar height */
+/* reduces the urlbar height */
 #urlbar {
   --urlbar-toolbar-height: 25px !important;
 }
@@ -147,7 +147,7 @@ toolbarbutton {
 }
 
 /*
-	NAV TEXTBOX
+	URLBAR TEXTBOX
 */
 
 /* hides the placeholder text in search bar */
@@ -161,7 +161,7 @@ toolbarbutton {
 }
 
 /*
-	NAV TEXTBOX - LEFT
+	URLBAR TEXTBOX - LEFT
 */
 
 /* hides the tracking protection (shield) icon until we hover on the urlbar */
@@ -206,8 +206,17 @@ toolbarbutton {
   border: none !important;
 }
 
+/* Pushes identity, permissions and certificates to the right of the navbar */ 
+#urlbar-input-container {
+  display: block !important;
+}
+#tracking-protection-icon-container, #identity-box {
+  float: right;
+}
+
+
 /*
-	NAV TEXTBOX - RIGHT
+	URLBAR TEXTBOX - RIGHT
 */
 
 /* removes the reader icon and seperator */
