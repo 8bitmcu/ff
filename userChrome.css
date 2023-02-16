@@ -106,6 +106,12 @@ toolbarbutton stack {
   height: initial !important;
   width: initial !important;
 }
+toolbarbutton stack image {
+  max-height: 16px !important;
+}
+#nav-bar {
+  height: 25px !important;
+}
 
 /* reduces the searchbar/navbar height */
 #urlbar,
@@ -130,8 +136,9 @@ toolbarbutton {
   list-style-image: url("chrome://browser/skin/bookmark-hollow.svg") !important;
 }
 /* removes the extensions button */
-#unified-extensions-button {
-  display: none !important;
+#unified-extensions-button, #unified-extensions-button image {
+  width: 1px !important;
+  padding: 0 !important;
 }
 
 /* hides the harmburger icon separator */
