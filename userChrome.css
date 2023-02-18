@@ -4,7 +4,7 @@ toolbar {
 }
 
 /*
-  NAV BAR
+  NAV BAR (TABS)
 */
 
 /* reduces the tab bar height */
@@ -98,16 +98,13 @@ window[chromehidden^="menubar"] #titlebar {
 #urlbar-container {
   --urlbar-container-height: 25px !important;
 }
-#nav-bar-customization-target toolbarbutton image,
+#nav-bar-customization-target > toolbarbutton > image,
 toolbarbutton stack {
   padding: calc(var(--toolbarbutton-inner-padding) / 2) !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   height: initial !important;
   width: initial !important;
-}
-toolbarbutton stack image {
-  max-height: 16px !important;
 }
 #nav-bar {
   height: 25px !important;
@@ -179,27 +176,45 @@ toolbarbutton {
   visibility: initial !important;
 }
 
-/* hides the identity (i) icon until we hover on the urlbar */
+/* hides the lock icon until we hover on the urlbar */
 #identity-icon {
-  visibility: hidden !important;
+  width: 1px !important;
 }
 #nav-bar:hover #identity-icon {
+  width: initial !important;
+}
+#identity-icon image {
+  visibility: hidden !important;
+}
+#nav-bar:hover #identity-icon image {
   visibility: initial !important;
 }
 
 /* hides permission icon until we hover on the urlbar */ 
 #identity-permission-box {
-  visibility: hidden !important;
+  width: 1px !important;
 }
 #nav-bar:hover #identity-permission-box {
+  width: initial !important;
+}
+#identity-permission-box image {
+  visibility: hidden !important;
+}
+#nav-bar:hover #identity-permission-box image {
   visibility: initial !important;
 }
 
 /* hides certificates label until we hover on the urlbar */
-#identity-icon-box {
+#identity-icon-box, #permissions-granted-icon {
+  width: 1px !important;
+}
+#nav-bar:hover #identity-icon-box, #nav-bar:hover #permissions-granted-icon {
+  width: initial !important;
+}
+#identity-icon-box image, #permissions-granted-icon image {
   visibility: hidden !important;
 }
-#nav-bar:hover #identity-icon-box {
+#nav-bar:hover #identity-icon-box image, #nav-bar:hover #permissions-granted-icon image {
   visibility: initial !important;
 }
 /* fixes spacing caused by hiding certificates */
