@@ -136,6 +136,7 @@ toolbarbutton {
 #unified-extensions-button, #unified-extensions-button image {
   width: 1px !important;
   padding: 0 !important;
+  list-style-image: none !important;
 }
 
 /* hides the harmburger icon separator */
