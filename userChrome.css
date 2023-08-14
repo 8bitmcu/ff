@@ -165,9 +165,15 @@ toolbarbutton {
   background-color: var(--toolbar-bgcolor) !important;
 }
 
+
 /*
 	URLBAR TEXTBOX - LEFT
 */
+
+/* Hides the magnifying glass icon when no page is loaded */ 
+#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+  list-style-image: none !important;
+}
 
 /* hides the tracking protection (shield) icon until we hover on the urlbar */
 #tracking-protection-icon-box {
@@ -177,47 +183,28 @@ toolbarbutton {
   visibility: initial !important;
 }
 
-/* hides the lock icon until we hover on the urlbar */
-#identity-icon {
+/* Hides the lock icon until we hover on the urlbar */ 
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
   width: 1px !important;
-}
-#nav-bar:hover #identity-icon {
-  width: initial !important;
-}
-#identity-icon image {
-  visibility: hidden !important;
-}
-#nav-bar:hover #identity-icon image {
-  visibility: initial !important;
 }
 
-/* hides permission icon until we hover on the urlbar */ 
-#identity-permission-box {
-  width: 1px !important;
-}
-#nav-bar:hover #identity-permission-box {
+#nav-bar:hover #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
+#nav-bar:hover #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
   width: initial !important;
-}
-#identity-permission-box image {
-  visibility: hidden !important;
-}
-#nav-bar:hover #identity-permission-box image {
-  visibility: initial !important;
 }
 
-/* hides certificates label until we hover on the urlbar */
-#identity-icon-box, #permissions-granted-icon {
+/* Hides the permission icon until we hover on the urlbar */ 
+#permissions-granted-icon {
   width: 1px !important;
 }
-#nav-bar:hover #identity-icon-box, #nav-bar:hover #permissions-granted-icon {
+
+#nav-bar:hover #permissions-granted-icon {
   width: initial !important;
 }
-#identity-icon-box image, #permissions-granted-icon image {
-  visibility: hidden !important;
-}
-#nav-bar:hover #identity-icon-box image, #nav-bar:hover #permissions-granted-icon image {
-  visibility: initial !important;
-}
+
+
+
 /* fixes spacing caused by hiding certificates */
 #identity-box {
   padding-inline-end: 4px !important;
