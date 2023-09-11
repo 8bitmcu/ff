@@ -165,6 +165,10 @@ toolbarbutton {
   background-color: var(--toolbar-bgcolor) !important;
 }
 
+/* hides the 'go' icon */ 
+#urlbar-go-button {
+  display: none !important;
+}
 
 /*
 	URLBAR TEXTBOX - LEFT
@@ -271,9 +275,15 @@ toolbarbutton {
   min-height: initial !important;
 }
 
+/* Reduces spacing between bookmark menu items  */
+menupopup > menu, menupopup > menuitem { 
+  padding-block: 2px !important;
+}
+
 /*
 	HISTORY MENU
 */
+
 /* Remove "View History Sidebar" menu item */
 #appMenuViewHistorySidebar,
 /* Remove "Clear Recent History" menu item */
