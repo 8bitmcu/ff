@@ -1,6 +1,6 @@
 ## ff
 
-ff is an opiniated, minimal looking theme for Firefox Linux and Windows. It features:
+ff is an opiniated, minimal looking stylesheet for Firefox Linux and Windows. It features:
 - Lots of hidden visual components, or reduced by size
 - Tab close button and new tab button only appears on hover
 - menus are simplified, some items are removed for a cleaner look
@@ -9,9 +9,12 @@ ff is an opiniated, minimal looking theme for Firefox Linux and Windows. It feat
 
 ### Installation
 
-Copy userChrome.css to the chrome folder under your firefox profile. You will need to enable `toolkit.legacyUserProfileCustomizations.stylesheets` under `about:config`
+1. Copy userChrome.css to the chrome folder under your firefox profile.
+    - Windows: `%AppData%\Mozilla\Firefox\Profiles\xxxxxx.default\chrome`
+    - Linux: `~/.mozilla/firefox/xxxxxx.default/chrome`
+3. Enable `toolkit.legacyUserProfileCustomizations.stylesheets` under `about:config`
 
-### Preview
+### Previews
 
 Windows:
 
