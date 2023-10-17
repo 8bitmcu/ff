@@ -16,6 +16,7 @@ toolbar {
   margin-block: 0 !important;
 }
 #TabsToolbar-customization-target,
+#tabbrowser-arrowscrollbox,
 #tabbrowser-tabs {
   height: var(--tab-min-height);
 }
@@ -53,6 +54,10 @@ window[chromehidden^="menubar"] #titlebar {
   visibility: visible;
 }
 
+/* disables the close button hover effect */ 
+.close-icon:hover {
+  background-color: initial !important;
+}
 /* hides the audio playing / secondary label from tabs */
 .tab-secondary-label {
   display: none !important;
@@ -192,7 +197,6 @@ toolbarbutton {
 #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
   width: 1px !important;
 }
-
 #nav-bar:hover #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
 #nav-bar:hover #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
   width: initial !important;
@@ -202,12 +206,29 @@ toolbarbutton {
 #permissions-granted-icon {
   width: 1px !important;
 }
-
 #nav-bar:hover #permissions-granted-icon {
   width: initial !important;
 }
 
+/* Hides the password icon until we hover on the urlbar */ 
+#password-notification-icon {
+  width: 1px !important;
+}
+#nav-bar:hover #password-notification-icon {
+  width: initial !important;
+}
 
+/* Fixes height of the password icon */ 
+#notification-popup-box {
+  height: 16px !important;
+}
+
+/* Disables hover effect (background color change) */
+#notification-popup-box:hover,
+#identity-icon-box:hover,
+#tracking-protection-icon-container:hover {
+  background-color: initial !important;
+}
 
 /* fixes spacing caused by hiding certificates */
 #identity-box {
