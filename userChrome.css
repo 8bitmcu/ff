@@ -121,6 +121,12 @@ toolbarbutton stack {
   min-height: initial !important;
   margin: 0 !important;
 }
+
+/* pushes the urlbar inline with other items */
+.urlbar-input-box {
+  display: inline-flex;
+}
+
 #titlebar {
   appearance: initial !important;
 }
@@ -242,13 +248,15 @@ toolbarbutton {
 }
 
 /* Pushes identity, permissions and certificates to the right of the navbar */ 
-#urlbar-input-container {
-  display: block !important;
+#remote-control-box {
+  order: 5;
 }
-#tracking-protection-icon-container, #identity-box {
-  float: right;
+#tracking-protection-icon-container {
+  order: 6;
 }
-
+#identity-box {
+  order: 7;
+}
 
 /*
 	URLBAR TEXTBOX - RIGHT
