@@ -2,8 +2,8 @@
 
 `ff` is an opiniated, minimal stylesheet for Firefox Linux and Windows. It features:
 - Lots of hidden visual components, or reduced by size
-- Some buttons like tab close and new tab only appears on hover
-- menus are simplified, some items are removed for a cleaner look
+- Some elements like New tab button and site information only appears on hover
+- Menus are simplified, some items are removed for a cleaner look
 - Seemless URL bar with no placeholder text
 - Good comments in the CSS, should you choose to customize it
 
