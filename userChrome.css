@@ -310,6 +310,32 @@ menupopup > menu, menupopup > menuitem {
 }
 
 /*
+  DOWNLOADS MENU
+*/
+/* reduces height of most items */
+.downloadTypeIcon {
+  width: 16px !important;
+  height: 16px !important;
+}
+.downloadButton {
+  height: 16px !important;
+  min-width: 16px !important;
+}
+.downloadDetails {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+.downloadMainArea {
+  padding-block: 0 !important;
+}
+#downloadsListBox > richlistitem {
+  min-height: 0 !important;
+  margin: 0 0 2px !important;
+}
+#downloadsHistory {
+  padding: 0 !important;
+}
+/*
 	HISTORY MENU
 */
 
@@ -389,3 +415,4 @@ menupopup > menu, menupopup > menuitem {
 .editBMPanel_keywordRow {
   display: initial !important;
 }
+
