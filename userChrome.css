@@ -186,9 +186,10 @@ toolbarbutton {
 */
 
 /* Hides the magnifying glass icon when no page is loaded */ 
-#urlbar:not(.searchButton) > #urlbar-input-container > #identity-box[pageproxystate="invalid"] #identity-icon {
+#identity-box[pageproxystate="invalid"] #identity-icon {
   list-style-image: none !important;
 }
+
 
 /* hides the tracking protection (shield) icon until we hover on the urlbar */
 #tracking-protection-icon-box {
@@ -284,6 +285,24 @@ toolbarbutton {
 }
 
 /*
+  URLBAR SUGGESTIONS POPUP 
+*/
+
+/* remove search engines from suggestions popup */ 
+.search-one-offs {
+  display: none !important;
+}
+
+/* reduces suggestion height */
+.urlbarView-row {
+  min-height: initial !important;
+}
+.urlbarView-row-inner {
+  min-height: initial !important;
+  padding: 3px !important;
+}
+
+/*
 	BOOKMARKS MENU
 */
 
@@ -310,7 +329,7 @@ menupopup > menu, menupopup > menuitem {
 }
 
 /*
-  DOWNLOADS MENU
+ DOWNLOADS MENU
 */
 /* reduces height of most items */
 .downloadTypeIcon {
@@ -387,7 +406,7 @@ menupopup > menu, menupopup > menuitem {
 /* Remove "Add-ons and themes" menu item */
 #appMenu-extensions-themes-button,
 /* Hides all separators */
-#appMenu-protonMainView toolbarseparator {
+#appMenu-mainView toolbarseparator {
   display: none !important;
 }
 
@@ -415,4 +434,7 @@ menupopup > menu, menupopup > menuitem {
 .editBMPanel_keywordRow {
   display: initial !important;
 }
+
+
+
 
