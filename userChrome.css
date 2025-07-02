@@ -190,6 +190,10 @@ toolbarbutton {
   list-style-image: none !important;
 }
 
+/* Hides the search engine switcher icon */
+#urlbar-searchmode-switcher {
+  display: none;
+}
 
 /* hides the tracking protection (shield) icon until we hover on the urlbar */
 #tracking-protection-icon-box {
@@ -299,7 +303,10 @@ toolbarbutton {
 }
 .urlbarView-row-inner {
   min-height: initial !important;
-  padding: 3px !important;
+  padding: 1px !important;
+}
+.urlbarView-favicon {
+  margin-inline-end: var(--urlbarView-icon-margin-start) !important;
 }
 
 /*
@@ -353,6 +360,10 @@ menupopup > menu, menupopup > menuitem {
 }
 #downloadsHistory {
   padding: 0 !important;
+}
+#emptyDownloads {
+  padding: initial !important;
+  margin-bottom: 4px;
 }
 /*
 	HISTORY MENU
