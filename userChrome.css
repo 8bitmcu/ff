@@ -220,6 +220,12 @@ toolbarbutton {
 #nav-bar:hover #permissions-granted-icon {
   width: initial !important;
 }
+#blocked-permissions-container {
+  visibility: collapse !important;
+}
+#nav-bar:hover #blocked-permissions-container {
+  visibility: initial !important;
+}
 
 /* Hides the password icon until we hover on the urlbar */ 
 #password-notification-icon {
@@ -233,6 +239,15 @@ toolbarbutton {
 #notification-popup-box {
   height: 16px !important;
 }
+
+/* Hides the picture-in-picture icon until we hover on the urlbar */
+#picture-in-picture-button {
+  visibility: collapse !important;
+}
+#nav-bar:hover #picture-in-picture-button {
+  visibility: visible !important;
+}
+
 
 /* Disables hover effect (background color change) */
 #notification-popup-box:hover,
