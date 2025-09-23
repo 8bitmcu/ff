@@ -172,7 +172,7 @@ toolbarbutton {
 }
 
 /* makes the textbox the same color as the rest of the navbar */
-#urlbar-background {
+.urlbar-background {
   background-color: var(--toolbar-bgcolor) !important;
 }
 
