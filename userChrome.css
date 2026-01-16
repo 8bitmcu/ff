@@ -17,9 +17,11 @@ toolbar {
 }
 #TabsToolbar-customization-target,
 #tabbrowser-arrowscrollbox,
-#tabbrowser-tabs {
+#tabbrowser-tabs,
+tab.tabbrowser-tab {
   height: var(--tab-min-height);
 }
+
 /* hides the tab bar when in 'new window' mode */
 window[chromehidden^="menubar"] #titlebar {
   height: 0;
@@ -113,6 +115,7 @@ toolbarbutton stack {
 }
 #nav-bar {
   height: 25px !important;
+  border: none !important;
 }
 
 /* reduces the searchbar/navbar height */
