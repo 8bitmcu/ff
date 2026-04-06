@@ -218,9 +218,13 @@ toolbarbutton {
   width: initial !important;
 }
 
-/* Aligns the trust icon vertically */
+/* Aligns the trust icon vertically. Hide until we hover */
 #trust-icon-container {
   height: initial !important;
+  display: none !important;
+}
+#nav-bar:hover #trust-icon-container {
+  display: initial !important;
 }
 
 /* Hides the permission icon until we hover on the urlbar */ 
@@ -278,14 +282,17 @@ toolbarbutton {
 }
 
 /* Pushes identity, permissions and certificates to the right of the navbar */ 
-#remote-control-box {
-  order: 5;
+#trust-icon-container {
+  order: 5
 }
-#tracking-protection-icon-container {
+#remote-control-box {
   order: 6;
 }
-#identity-box {
+#tracking-protection-icon-container {
   order: 7;
+}
+#identity-box {
+  order: 8;
 }
 
 /*
