@@ -170,7 +170,7 @@ toolbarbutton {
 */
 
 /* hides the placeholder text in search bar */
-#urlbar-input::placeholder {
+.urlbar-input::placeholder {
   color: transparent;
 }
 
