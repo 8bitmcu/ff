@@ -174,13 +174,13 @@ toolbarbutton {
   color: transparent;
 }
 
-/* makes the textbox the same color as the rest of the navbar */
+/* makes the textbox seemless */
 .urlbar-background {
-  background-color: var(--toolbar-bgcolor) !important;
+  display: none !important;
 }
 
 /* hides the 'go' icon */ 
-#urlbar-go-button {
+.urlbar-go-button {
   display: none !important;
 }
 
@@ -214,6 +214,11 @@ toolbarbutton {
 #nav-bar:hover #identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
 #nav-bar:hover #identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
   width: initial !important;
+}
+
+/* Aligns the trust icon vertically */
+#trust-icon-container {
+  height: initial !important;
 }
 
 /* Hides the permission icon until we hover on the urlbar */ 
