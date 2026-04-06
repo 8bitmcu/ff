@@ -176,7 +176,9 @@ toolbarbutton {
 
 /* makes the textbox seemless */
 .urlbar-background {
-  display: none !important;
+  background-color: var(--toolbar-bgcolor) !important;
+  border: initial !important;
+  outline: initial !important;
 }
 
 /* hides the 'go' icon */ 
